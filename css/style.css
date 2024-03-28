@@ -58,6 +58,7 @@ main {
 .creds {
     width: 80%;
     border-bottom: 2px solid #B174F8;
+    position: relative;
 }
 
 .creds input {
@@ -66,8 +67,22 @@ main {
     font-size: 15px;
     color: #fff;
     padding: 10px;
-    margin: 10px;
-    width: 85%;
+    width: 100%;
+}
+
+.creds label {
+    position: absolute;
+    top: 5px;
+}
+
+.creds label span {
+    display: inline-block;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.creds input:focus + label span {
+    transform: translateY(-30px);
 }
 
 .psd-input {
