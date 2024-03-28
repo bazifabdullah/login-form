@@ -55,64 +55,17 @@ main {
     margin-bottom: 40px;
 }
 
-.creds {
-    width: 80%;
-    border-bottom: 2px solid #B174F8;
-    position: relative;
-}
-
-.creds input {
-    border: none;
-    background-color: transparent;
-    font-size: 15px;
-    color: #fff;
-    padding: 10px;
-    width: 100%;
-}
-
-.creds label {
-    position: absolute;
-    top: 5px;
-}
-
-.creds label span {
-    display: inline-block;
-    min-width: 5px;
-    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.creds input:focus + label span {
-    transform: translateY(-30px);
-}
-
-.psd-input {
-    margin-top: 20px;
-}
-
-.creds input:focus {
-    outline: none;
-}
-
-
-::placeholder {
-    color: white;
-    font-size: 15px;
-    font-weight: normal;
-}
-
 .remember-checkbox {
     font-size: 14px;
     font-weight: 400;
-    margin: 20px 0 20px 50px;
-    align-self: flex-start;
+    width: 85%;
+    position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 5px;
+    margin-bottom: 40px;
 }
 
-.remember-checkbox label {
-    margin-left: 5px;
-}
+/* Login Button - Start */
 
 .login-btn {
     padding: 15px 40px;
@@ -140,4 +93,50 @@ main {
 
 .forgot-psd:hover {
     color: #fff;
+}
+
+/* Input Section */
+
+.creds {
+    width: 85%;
+    position: relative;
+}
+
+.creds input {
+    background-color: transparent;
+    border: none;
+    padding: 20px 0 10px 0;
+    border-bottom: 2px #AC7BFA solid;
+    width: 100%;
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+    z-index: 100;
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+
+.creds input:focus,
+.creds input:valid {
+    outline: none;
+    border-bottom: 2px solid #fff;
+}
+
+.creds label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+.creds label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.creds input:focus + label span,
+.creds input:valid + label span {
+    transform: translateY(-30px);
 }
